@@ -18,5 +18,16 @@ data Nat = O | S Nat
 (^) n O = S O
 (^) n (S m) = n * (n ^ m)
 
+double :: Nat -> Nat
+double O = O
+double (S n) = S ( S (double n))
 
+fact :: Nat -> Nat
+fact O = S O
+fact (S n) = S n * fact n
+
+fib :: Nat -> Nat
+fib O = O
+fib (S O) = S O
+fib (S(S n)) = fib (S n) + fib n
 
