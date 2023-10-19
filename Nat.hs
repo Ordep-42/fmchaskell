@@ -1,3 +1,5 @@
+{-# LANGUAGE GADTs #-}
+
 module Nat where
 
 import Prelude hiding 
