@@ -1,7 +1,7 @@
 module Nat where
 
 import Prelude hiding 
-    ((+), (*), (^), fact, fib, double, min, max)
+    ((+), (*), (^), fact, fib, double, min, max, (<), (<=))
 
 data Nat = O | S Nat
     deriving (Eq, Show)
@@ -40,3 +40,13 @@ max :: Nat -> Nat -> Nat
 max (S n) O = S n
 max O (S n) = S n
 max (S n) (S m) = S (max n m)
+
+od :: Nat -> Bool
+od O = False
+od (S O) = True
+od (S(S n)) = od n
+
+ev :: Nat -> Bool
+ev O = True
+ev (S O) = False
+ev (S(S n)) = ev n
