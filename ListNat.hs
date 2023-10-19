@@ -13,6 +13,10 @@ length :: ListNat -> Nat
 length [] = O
 length (n:ns) = S(length ns)
 
+elem :: Nat -> ListNat -> Bool
+elem _ [] = False
+elem n (m:ms) = n == m || elem n ms
+
 sum :: ListNat -> Nat
 sum [] = O
 sum (n:ns) = n + sum ns
