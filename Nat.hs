@@ -5,6 +5,8 @@ module Nat where
 import Prelude hiding 
     ((+), (*), (^), fact, fib, double, min, max, (<), (<=), Bool, True, False)
 
+import Bool
+
 data Nat = O | S Nat
     deriving (Eq, Show)
 
