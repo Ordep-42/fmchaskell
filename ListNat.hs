@@ -3,7 +3,7 @@
 module ListNat where
 
 import Prelude hiding 
-    ((+), (*), (^), fact, fib, double, min, max, (<), (<=), sum, length, product, (++))
+    ((+), (*), (^), fact, fib, double, min, max, (<), (<=), sum, length, product, elem, (++))
 
 import Nat
 
@@ -28,3 +28,7 @@ product (n:ns) = n * product ns
 (++) :: ListNat -> ListNat -> ListNat
 (++) [] ns = ns
 (++) (n:ns) ms = (n:(++)ns ms)
+
+enum :: Nat -> ListNat
+enum O = (O:[])
+enum (S n) = ((S n):enum n)
