@@ -3,7 +3,7 @@
 module Nat where
 
 import Prelude hiding 
-    ((+), (*), (^), fact, fib, double, min, max, (<), (<=))
+    ((+), (*), (^), fact, fib, double, min, max, (<), (<=), Bool, True, False)
 
 data Nat = O | S Nat
     deriving (Eq, Show)
