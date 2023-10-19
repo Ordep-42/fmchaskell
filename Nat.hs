@@ -50,3 +50,12 @@ ev :: Nat -> Bool
 ev O = True
 ev (S O) = False
 ev (S(S n)) = ev n
+
+isZero :: Nat -> Bool
+isZero O = True
+isZero _ = False
+
+leq :: Nat -> Nat -> Bool
+leq O _ = True
+leq _ O = False
+leq (S n) (S m) = leq n m
